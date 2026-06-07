@@ -67,8 +67,11 @@ public class SecurityConfig {
         CorsConfiguration configuration =
                 new CorsConfiguration();
 
-        configuration.setAllowedOriginPatterns(
-                List.of("*")
+        configuration.setAllowedOrigins(
+                List.of(
+                        "http://localhost:5173",
+                        "https://finnova-ai-finance.vercel.app"
+                )
         );
 
         configuration.setAllowedMethods(
